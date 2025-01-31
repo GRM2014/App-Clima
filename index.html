@@ -7,28 +7,31 @@
         <link rel="stylesheet" href="styles.css" />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
         />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
         <link rel="manifest" href="manifest.json">
         <meta name="theme-color" content="#0000ff">
-        
+
         <script>            
         function volverAlInicio() {
             location.reload();
         }
         </script>
-
     </head>
 
     <body>
+
+        <video autoplay loop muted playsinline id="video-fondo">
+            <source src="BackgroundsVideos/VideoPocoNublado.mp4" type="video/mp4">
+            Tu navegador no soporta videos en HTML5.
+        </video>
+
+        <h1 class="title">Mi App del Clima</h1>
         <div class="main-container">
             <form id="searchForm">
-                <label for="nombre"
-                    ><span class="material-symbols-outlined">
-                        location_on
-                    </span></label
-                >
+                <label for="nombre">
+                    <span class="material-symbols-outlined"> location_on </span>
+                </label>
                 <input
                     type="text"
                     id="cityInput"
@@ -37,17 +40,14 @@
                     required
                 />
                 <button type="submit" id="searchButton">
-                    <span class="material-symbols-outlined">
-                        search
-                    </span>
+                    <span class="material-symbols-outlined"> search </span>
                 </button>
             </form>
         </div>
 
         <div id="weatherInfo"></div>
         <button id="btnVolver" onclick="volverAlInicio()">Volver al Menú</button>
-        <span>hola</span>
+
         <script src="script.js"></script>
     </body>
-
 </html>

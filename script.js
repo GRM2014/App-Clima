@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let div = document.getElementById("weatherInfo");
             let btnVolver = document.getElementById("btnVolver");
 
-            div.style.display = "block"; // Muestra el div cada vez que se agrega algo
+            div.style.opacity = "1"; // Muestra el div cada vez que se agrega algo
+            div.style.transition= "2s ease-in-out";
             btnVolver.style.display = "block";
 
             weatherInfo.innerHTML = `
